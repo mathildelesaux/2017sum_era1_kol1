@@ -21,3 +21,28 @@
 #
 #Delete these comments before commit!
 #Good luck.
+
+
+matrix1 = array[(4,5),(6,7)]
+matrix2= array[(2,2),(2,1)]
+
+def sum_matrix (m1,m2) :
+	if len matrix1 == matrix2 :
+		sum = matrix1+matrix
+		print sum 
+
+
+def multiply(m1, m2): 
+     m = [] 
+     if len(m1[0]) != len(m2): 
+        return False 
+     for i in range(len(m1)): 
+          ligne = [] 
+          for j in range(len(m2[0])): 
+               for k in range(len(m1[0])): 
+                    element = m1[i][j] * m2[i][j] 
+                    element = element + m1[i][k] * m2[k][i] 
+          ligne.append(element) 
+     m.append(ligne) 
+return m 
+
