@@ -22,27 +22,46 @@
 #Delete these comments before commit!
 #Good luck.
 
+import numpy as np
 
-matrix1 = array[(4,5),(6,7)]
-matrix2= array[(2,2),(2,1)]
+A=[(4,5),(6,7)]
+B=[(2,2),(2,1)]
 
-def sum_matrix (m1,m2) :
-	if len matrix1 == matrix2 :
-		sum = matrix1+matrix
-		print sum 
+#Transpose
+
+print(np.transpose(A))
 
 
-def multiply(m1, m2): 
-     m = [] 
-     if len(m1[0]) != len(m2): 
-        return False 
-     for i in range(len(m1)): 
-          ligne = [] 
-          for j in range(len(m2[0])): 
-               for k in range(len(m1[0])): 
-                    element = m1[i][j] * m2[i][j] 
-                    element = element + m1[i][k] * m2[k][i] 
-          ligne.append(element) 
-     m.append(ligne) 
-return m 
+def sum_2matrix (A,B):
+    C = []
+    for list1, list2 in zip(A,B):
+        C.append([list1[i]+list2[i] for i in range(len(list1))])
+    return C
+
+print(sum_2matrix (A,B))
+
+def sous_2matrix (A,B):
+    C=[]
+    for list1, list2 in zip(A,B):
+        C.append([list1[i]-list2[i] for i in range(len(list1))])
+    return C
+
+print(sous_2matrix (A,B))
+
+def multiply_2matrix (A,B):
+    C=[]
+    for list1, list2 in zip(A,B):
+        C.append([list1[i]*list2[i] for i in range(len(list1))])
+    return C
+
+print(multiply_2matrix (A,B))
+
+def divid_2matrix (A,B):
+    C=[]
+    for list1, list2 in zip(A,B):
+        C.append([list1[i]/list2[i] for i in range(len(list1))])
+    return C
+
+print(divid_2matrix (A,B))
+
 
