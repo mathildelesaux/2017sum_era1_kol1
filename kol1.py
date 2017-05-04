@@ -24,6 +24,11 @@
 
 import numpy as np
 
+#addition de deux matrices / entre colones / entre lignes
+#soustraction " / "
+#multiplication " / "
+#division " / "
+
 A=[(4,5),(6,7)]
 B=[(2,2),(2,1)]
 
@@ -31,6 +36,15 @@ B=[(2,2),(2,1)]
 
 print(np.transpose(A))
 
+#Déterminant
+
+print(np.linalg.det(A))
+
+#Inversion
+
+print(np.linalg.inv(A))
+
+#Addition of 2 matrix
 
 def sum_2matrix (A,B):
     C = []
@@ -40,6 +54,8 @@ def sum_2matrix (A,B):
 
 print(sum_2matrix (A,B))
 
+#Soustraction of 2 matrix
+
 def sous_2matrix (A,B):
     C=[]
     for list1, list2 in zip(A,B):
@@ -48,6 +64,8 @@ def sous_2matrix (A,B):
 
 print(sous_2matrix (A,B))
 
+#Multiplication of 2 matrix
+
 def multiply_2matrix (A,B):
     C=[]
     for list1, list2 in zip(A,B):
@@ -55,6 +73,8 @@ def multiply_2matrix (A,B):
     return C
 
 print(multiply_2matrix (A,B))
+
+#Divid 2 matrix
 
 def divid_2matrix (A,B):
     C=[]
