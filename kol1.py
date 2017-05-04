@@ -24,11 +24,6 @@
 
 import numpy as np
 
-#addition de deux matrices / entre colones / entre lignes
-#soustraction " / "
-#multiplication " / "
-#division " / "
-
 A=[(4,5),(6,7)]
 B=[(2,2),(2,1)]
 
@@ -84,4 +79,36 @@ def divid_2matrix (A,B):
 
 print(divid_2matrix (A,B))
 
+def add_line (A,B):
+    C=[]
+    for list1, list2 in zip(A,B):
+        C.append([list1[i] for i in range(len(list1))])
+    return C
 
+print(add_line (A,B))
+
+def mat_product (A, B):
+    C=np.dot(A,B)
+    return C
+
+print(mat_product(A,B))
+
+#n=int(input("Number ? : "))
+
+def sum_line(A):
+    sum=np.sum(A,axis=1)
+    return sum
+print (sum_line (A))
+
+def sum_col (A):
+    sum=np.sum(A,axis=0)
+    return sum
+print(sum_col(A))
+
+def mean_line(A):
+    return np.mean(A,axis=0)
+print(mean_line(A))
+
+def mean_col(A):
+    return np.mean(A,axis=1)
+print(mean_col(A))
