@@ -79,6 +79,8 @@ def divid_2matrix (A,B):
 
 print(divid_2matrix (A,B))
 
+#
+
 def add_line (A,B):
     C=[]
     for list1, list2 in zip(A,B):
@@ -87,28 +89,51 @@ def add_line (A,B):
 
 print(add_line (A,B))
 
+#Product Matrix
+
 def mat_product (A, B):
     C=np.dot(A,B)
     return C
 
 print(mat_product(A,B))
 
-#n=int(input("Number ? : "))
+#Addition line by line
 
 def sum_line(A):
     sum=np.sum(A,axis=1)
     return sum
 print (sum_line (A))
 
+#Addition col by col
+
 def sum_col (A):
     sum=np.sum(A,axis=0)
     return sum
 print(sum_col(A))
 
+#Mean by line
+
 def mean_line(A):
     return np.mean(A,axis=0)
 print(mean_line(A))
 
+#Mean by col
+
 def mean_col(A):
     return np.mean(A,axis=1)
 print(mean_col(A))
+
+
+A=np.array([(4,5),(6,7)])
+
+#Min 
+
+def min (A):
+    return A.min()
+print(min(A))
+
+#Max
+
+def max (A):
+    return A.max()
+print(max(A))
